@@ -1,0 +1,15 @@
+map2$setTemplate(chartDiv = "
+                 <div class='container'>
+                 <input id='slider' type='range' min = 1 max = 30 steps = 1 ng-model='Year' width=500>
+                 <span ng-bind='Year'></span>
+                 <div id='chart_1' class='rChart datamaps'></div>  
+                 </div>
+                 <script>
+                 function rChartsCtrl($scope){
+                 $scope.Year = 1;
+                 $scope.$watch('Year', function(newYear){
+                 mapchart_1.updateChoropleth(chartParams.newData[newYear]);
+                 })
+                 }
+                 </script>"
+)
